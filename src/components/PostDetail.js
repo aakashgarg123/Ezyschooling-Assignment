@@ -30,7 +30,7 @@ const PostDetail = (props) => {
    
     return (
         <div>
-            { post && comment && userDetail &&
+            { post && comment && userDetail && Number.isInteger(parseInt(id)) &&
             <React.Fragment>
                 <div className="card text-center ">
         
@@ -39,11 +39,8 @@ const PostDetail = (props) => {
                         <p className="card-text">
                             {post.body}
                         </p>
-                        {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
-                       
                     </div>
-
-                    
+  
                 </div>
                 
                 <div className="card text-center">
@@ -57,17 +54,17 @@ const PostDetail = (props) => {
                 </div>
 
                 <div className="card text-center">
-
-                        <h4 className="card-title text-success">Author:{userDetail.name}</h4>
-                        
+                        <h4 className="card-title text-success">Author:{userDetail.name}</h4>     
                 </div>
 
                 
 
         
 
-        </React.Fragment>      
-}
+            </React.Fragment>    
+              
+            }
+            {!Number.isInteger(parseInt(id)) && <h2 className="text-danger text-center">Please enter a numeric post id</h2>}
         </div>
     )
 }
