@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# To start the application run "npm install" first to install the dependencies and then run "npm start" .
+The initial load of the app looks like:
+![Uploading image.png…]()
+
+
 ## Available Scripts
 
 In the project directory, you can run:
